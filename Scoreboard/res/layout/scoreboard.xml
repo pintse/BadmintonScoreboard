@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Scoreboard"
+    android:background="#000000">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/leftScoreTextView"
+            android:textSize="150dp"
+            android:textAlignment="center"
+            android:layout_alignTop="@+id/rightScoreTextView"
+            android:layout_alignRight="@+id/leftRadioBtn"
+            android:textColor="#ffffff"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="："
+            android:id="@+id/centerTextView"
+            android:textSize="150dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffffff"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0"
+            android:id="@+id/rightScoreTextView"
+            android:textSize="150dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/rightEditText"
+            android:layout_toRightOf="@+id/resetBtn"
+            android:textColor="#ffffff"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/leftPlusBtn"
+            android:layout_alignBaseline="@+id/centerTextView"
+            android:layout_alignBottom="@+id/centerTextView"
+            android:layout_alignParentLeft="true"
+            android:background="#c8c8c8"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/leftMinusBtn"
+            android:layout_alignBaseline="@+id/resetBtn"
+            android:layout_alignBottom="@+id/resetBtn"
+            android:layout_alignLeft="@+id/leftPlusBtn"
+            android:background="#c8c8c8"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/rightPlusBtn"
+            android:layout_alignBaseline="@+id/centerTextView"
+            android:layout_alignBottom="@+id/centerTextView"
+            android:layout_alignParentRight="true"
+            android:background="#c8c8c8"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/rightMinusBtn"
+            android:layout_below="@+id/centerTextView"
+            android:layout_alignLeft="@+id/rightPlusBtn"
+            android:background="#c8c8c8"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/leftEditText"
+            android:width="150dp"
+            android:layout_above="@+id/leftScoreTextView"
+            android:layout_toLeftOf="@+id/centerTextView"
+            android:layout_marginRight="7dp"
+            android:background="#ffffffff"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:ems="10"
+            android:id="@+id/rightEditText"
+            android:width="150dp"
+            android:layout_alignTop="@+id/centerTextView"
+            android:layout_toRightOf="@+id/centerTextView"
+            android:background="#ffffffff"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/resetBtn"
+            android:layout_below="@+id/centerTextView"
+            android:layout_centerHorizontal="true"
+            android:background="#c8c8c8"/>
+
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rightRadioBtn"
+            android:checked="false"
+            android:layout_alignBottom="@+id/leftRadioGroup"
+            android:layout_toRightOf="@+id/resetBtn"/>
+
+    <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leftRadioBtn"
+            android:checked="false"
+            android:layout_alignTop="@+id/centerTextView"
+            android:layout_toRightOf="@+id/leftEditText"
+            android:layout_toLeftOf="@+id/resetBtn"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="© 2013 Chen Pintse"
+            android:id="@+id/textView"
+            android:layout_alignBottom="@+id/resetBtn"
+            android:layout_toRightOf="@+id/rightRadioBtn"
+            android:textColor="#ffffffff"/>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:id="@+id/leftCheckBox"
+            android:checked="false"
+            android:layout_alignTop="@+id/leftEditText"
+            android:layout_alignLeft="@+id/leftPlusBtn"
+            android:textColor="#ffffffff"/>
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:id="@+id/rightCheckBox"
+            android:checked="false"
+            android:layout_alignTop="@+id/rightEditText"
+            android:layout_alignRight="@+id/rightPlusBtn"
+            android:textColor="#ffffffff"/>
+
+</RelativeLayout>
